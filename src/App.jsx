@@ -5,6 +5,7 @@ import DetailsPage from "./DetailsPage";
 import CheckoutPage from "./CheckoutPage";
 import PageNotFound from "./404";
 import ProductsProvider from "./context/ProductsContext";
+import "../src/style.css"
 
 function App() {
   return (

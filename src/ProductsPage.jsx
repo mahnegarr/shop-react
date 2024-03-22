@@ -5,6 +5,7 @@ import { useProducts } from "./context/ProductsContext";
 import Card from "./components/Card";
 import Loader from "./components/Loader";
 import { useEffect } from "react";
+import { filterProducts, searchProducts } from "./helpers/helper";
 
 function ProductsPage() {
   const products = useProducts();
@@ -19,6 +20,12 @@ function ProductsPage() {
 
   useEffect(() => {
     console.log(query);
+  }, [query]);
+
+  useEffect(() => {
+    let finalProducts = searchProducts(products, query.search);
+    finalProducts = filterProducts(finalProducts, query.category);
+    setDisplayed(finalProducts);
   }, [query]);
 
   const searchHandler = () => {

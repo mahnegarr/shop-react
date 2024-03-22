@@ -13,6 +13,7 @@ const searchProducts = (products, search) => {
 const filterProducts = (products, category) => {
   if (!category) return products;
   const filteredProducts = products.filter((p) => p.category === category);
+  console.log(filteredProducts);
   return filteredProducts;
 };
 

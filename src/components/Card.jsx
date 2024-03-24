@@ -2,9 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { TbListDetails, TbShoppingBagCheck } from "react-icons/tb";
 import { shortenText } from "../helpers/helper";
+import { useCart } from "../context/CartContext";
 
 function Card({ data }) {
   const { id, title, image, price } = data;
+
+  useCart();
   return (
     <div className="w-[270px] m-[10px] p-[20px] flex flex-col items-start justify-end bg-[#fff] border-[2px] border-dashed border-[#e2e2e2] rounded-[20px] ">
       <img

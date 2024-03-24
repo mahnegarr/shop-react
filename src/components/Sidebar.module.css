@@ -1,0 +1,19 @@
+.sidebar li {
+    list-style: none;
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: .4rem;
+  }
+  
+  .sidebar li:hover {
+    color: #fe5d42;
+  }
+  
+  .selected {
+    background-color: #f7753d49;
+    color: #fe5d42;
+    border-radius: 10px;
+    padding:.2rem .5rem;
+    margin-left: -.4rem;
+    font-weight: 500;
+  }

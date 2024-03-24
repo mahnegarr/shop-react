@@ -13,7 +13,7 @@ function SearchBox({ search, setSearch, setQuery }) {
         placeholder="Search ..."
         value={search}
         onChange={(e) => setSearch(e.target.value.toLowerCase().trim())}
-        className="border-[2px] border-dashed border-[#fe5d42] p-[10px] w-[250px] text-[0.9rem] text-[#fe5d42] rounded-[10px] mr-[10px] focus:outline-none "
+        className="border-[2px] border-dashed h-1 border-[#fe5d42] p-[10px] w-[250px] text-[0.9rem] text-[#fe5d42] rounded-[10px] mr-[10px] focus:outline-none "
       />
       <button
         onClick={searchHandler}

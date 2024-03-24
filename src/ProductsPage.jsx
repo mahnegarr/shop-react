@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import {
   createQueryObject,
   filterProducts,
+  getInitialQuery,
   searchProducts,
 } from "./helpers/helper";
 
@@ -22,6 +23,8 @@ function ProductsPage() {
 
   useEffect(() => {
     setDisplayed(products);
+
+    setQuery(getInitialQuery(search));
   }, [products]);
 
   useEffect(() => {
@@ -30,6 +33,7 @@ function ProductsPage() {
 
   useEffect(() => {
     setSearchParams(query);
+    setSearch(query.search || "");
     let finalProducts = searchProducts(products, query.search);
     finalProducts = filterProducts(finalProducts, query.category);
     setDisplayed(finalProducts);
@@ -77,7 +81,7 @@ function ProductsPage() {
           <ul onClick={categoryHandler}>
             <li>All</li>
             <li>Electronics</li>
-            <li>Jewelry</li>
+            <li>Jewelery</li>
             <li>Men's Clothing</li>
             <li>women's Clothing</li>
           </ul>

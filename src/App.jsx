@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import ProductsPage from "./ProductsPage";
 import DetailsPage from "./DetailsPage";
 import CheckoutPage from "./CheckoutPage";
 import PageNotFound from "./404";
 import ProductsProvider from "./context/ProductsContext";
-import "../src/style.css"
+import "./style.css"
 
 function App() {
   return (
